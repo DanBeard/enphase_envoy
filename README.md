@@ -1,0 +1,1 @@
+Copy this folder into <config_dir>/custom_components/ and restart homeassistant. This should replace the core enphase_envoy integration. (You can tell if there is now a serial number input and checkbox. Check the checkbox to use the enlighten token (firmware >=  D7.0.0)
