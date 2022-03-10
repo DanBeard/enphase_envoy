@@ -36,9 +36,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         enlighten_pass=config[CONF_PASSWORD],
         inverters=True,
 #        async_client=get_async_client(hass),
-        use_enlighten_owner_token=config[CONF_USE_ENLIGHTEN],
+        use_enlighten_owner_token=config.get(CONF_USE_ENLIGHTEN, False),
         enlighten_serial_num=config[CONF_SERIAL],
-        https_flag='s' if config[CONF_USE_ENLIGHTEN] else ''
+        https_flag='s' if config.get(CONF_USE_ENLIGHTEN, False) else ''
     )
 
     async def async_update_data():
